@@ -11,9 +11,10 @@ from langchain_huggingface import HuggingFaceEndpoint
 ## Uncomment the following files if you're not using pipenv as your virtual environment manager
 #from dotenv import load_dotenv, find_dotenv
 #load_dotenv(find_dotenv())
-
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 os.environ["TRANSFORMERS_NO_ADVISORY_WARNINGS"] = "true"
+os.environ["HF_HUB_DISABLE_TELEMETRY"] = "1"
+
 
 DB_FAISS_PATH="vectorstore/db_faiss"
 @st.cache_resource

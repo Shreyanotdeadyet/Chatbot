@@ -5,6 +5,9 @@ from langchain_core.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+os.environ["TRANSFORMERS_NO_ADVISORY_WARNINGS"] = "true"
+os.environ["HF_HUB_DISABLE_TELEMETRY"] = "1"
 
 ## Uncomment the following files if you're not using pipenv as your virtual environment manager
 #from dotenv import load_dotenv, find_dotenv
