@@ -85,11 +85,17 @@ def main():
             response=qa_chain.invoke({'query':prompt})
 
             result=response["result"]
-            source_documents=response["source_documents"]
-            result_to_show=result+"\nSource Docs:\n"+str(source_documents)
+            
+# to check the source along with answer uncomment this 
+
+            # source_documents=response["source_documents"]
+            # result_to_show=result+"\nSource Docs:\n"+str(source_documents)
+            
+            result_to_show = result
             st.text(result_to_show)
             # st.chat_message('assistant').markdown(result_to_show)
             st.session_state.messages.append({'role':'assistant', 'content': result_to_show})
+
 
         except Exception as e:
             st.error(f"Error: {str(e)}")
