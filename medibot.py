@@ -12,6 +12,8 @@ from langchain_huggingface import HuggingFaceEndpoint
 #from dotenv import load_dotenv, find_dotenv
 #load_dotenv(find_dotenv())
 
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+os.environ["TRANSFORMERS_NO_ADVISORY_WARNINGS"] = "true"
 
 DB_FAISS_PATH="vectorstore/db_faiss"
 @st.cache_resource
