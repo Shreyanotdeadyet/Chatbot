@@ -28,6 +28,9 @@ This project implements a document question answering system by combining semant
 - The LLM generates an answer based on the ranked results.
 - Output the answer to the user.
 
+Details are present in chatbot_Documentation.docx
+
+
 ## Setup
 
 1. Clone the repository.
